@@ -66,8 +66,7 @@ public class FileManager
                     + "|" + transaction.getTime().format(timeFormatter)
                     + "|" + transaction.getDescription()
                     + "|" + transaction.getVendor()
-                    + "|" +
-                    transaction.getAmount());
+                    + "|" + transaction.getAmount());
 
             bufferedWriter.close();
         }

@@ -12,14 +12,14 @@ public class Main
         //Scanner
         Scanner scanner = new Scanner(System.in);
 
-        //Variable for the date the program is in use
+        //Date variables
         LocalDate currentDate = LocalDate.now();
+        int currentYear = currentDate.getYear();
 
         //Main Menu
         while(true)
         {
-            System.out.println("\n");
-            System.out.println("Please choose an option");
+            System.out.println("\nPlease choose an option");
             System.out.println("1) Add Deposit");
             System.out.println("2) Make Payment");
             System.out.println("3) Ledger");
@@ -81,10 +81,10 @@ public class Main
                     while(ledgerRunning)
                     {
                         System.out.println("\nPlease choose an option:");
-                        System.out.println("1) All");
-                        System.out.println("2) Deposits");
-                        System.out.println("3) Payments");
-                        System.out.println("4) Reports");
+                        System.out.println("1) Show All Transactions");
+                        System.out.println("2) Show Deposits");
+                        System.out.println("3) Show Payments");
+                        System.out.println("4) Show Reports");
                         System.out.println("5) Return");
                         String ledgerInput = scanner.nextLine();
 
@@ -103,7 +103,7 @@ public class Main
                                 System.out.println("\nHere are all your transactions:");
                                 for(Transactions transactions : allTransactions)
                                 {
-                                    System.out.printf("\n%s \t %s \t %s \t %s \t %f",
+                                    System.out.printf("%-12s %-8s %-25s %-15s %10.2f%n",
                                             transactions.getDate(), transactions.getTime(),
                                             transactions.getDescription(), transactions.getVendor(),
                                             transactions.getAmount());
@@ -112,12 +112,12 @@ public class Main
 
                                 //All deposits print
                             case "2":
-                                System.out.println("\nHere are all your deposits");
+                                System.out.println("\nHere are all your deposits:");
                                 for(Transactions transactions : allTransactions)
                                 {
                                     if(transactions.getAmount() > 0)
                                     {
-                                        System.out.printf("\n%s \t %s \t %s \t %s \t %f",
+                                        System.out.printf("%-12s %-8s %-25s %-15s %10.2f%n",
                                                 transactions.getDate(), transactions.getTime(),
                                                 transactions.getDescription(), transactions.getVendor(),
                                                 transactions.getAmount());
@@ -127,12 +127,12 @@ public class Main
 
                                 //All payments print
                             case "3":
-                                System.out.println("\nHere are all your payments");
+                                System.out.println("\nHere are all your payments:");
                                 for(Transactions transactions : allTransactions)
                                 {
                                     if(transactions.getAmount() < 0)
                                     {
-                                        System.out.printf("\n%s \t %s \t %s \t %s \t %f",
+                                        System.out.printf("%-12s %-8s %-25s %-15s %10.2f%n",
                                                 transactions.getDate(), transactions.getTime(),
                                                 transactions.getDescription(), transactions.getVendor(),
                                                 transactions.getAmount());
@@ -145,10 +145,9 @@ public class Main
                                 boolean reportRunning = true;
                                 while(reportRunning)
                                 {
-                                    System.out.println("What report would you like to see?" +
-                                            "\nPlease enter the number");
+                                    System.out.println("\nWhat report would you like to see?");
                                     System.out.println("1) Previous Month");
-                                    System.out.println("2) Year to Date");      //Start of previous year
+                                    System.out.println("2) Year to Date");      //Start of  year
                                     System.out.println("3) Previous Year");     //Start of current year
                                     System.out.println(("4) Return"));
                                     String reportsInput = scanner.nextLine();
@@ -163,7 +162,7 @@ public class Main
                                     {
                                         //All transactions from previous month
                                         case "1":
-                                            System.out.println("\nHere are all your transactions from the previous month");
+                                            System.out.println("\nHere are all your transactions from the previous month:");
 
                                             LocalDate startOfPastMonth = currentDate.minusMonths(1).withDayOfMonth(1);
                                             LocalDate endOfPastMonth = currentDate.withDayOfMonth(1).minusDays(1);
@@ -172,7 +171,7 @@ public class Main
                                             {
                                                 if(transactions.getDate().isBefore(endOfPastMonth) && transactions.getDate().isAfter(startOfPastMonth))
                                                 {
-                                                    System.out.printf("\n%s \t %s \t %s \t %s \t %f",
+                                                    System.out.printf("%-12s %-8s %-25s %-15s %10.2f%n",
                                                             transactions.getDate(), transactions.getTime(),
                                                             transactions.getDescription(), transactions.getVendor(),
                                                             transactions.getAmount());
@@ -182,19 +181,17 @@ public class Main
 
                                             //All transactions from start of asked year
                                         case "2":
-                                            System.out.println("What year would you like your transactions to begin from?");
-                                            int startYear = scanner.nextInt();
 
+                                            System.out.println("\nHere are all your transactions from the start of this year:");
 
-                                            LocalDate startOfInputYear = currentDate.withYear(startYear).withDayOfYear(1);
-
-                                            System.out.printf("\nHere are all your transactions starting from %d to today", startYear);
+                                            LocalDate startOfYear = LocalDate.of(currentYear, 1, 1);
+                                            LocalDate endOfYear = currentDate.plusYears(1);
 
                                             for(Transactions transactions : allTransactions)
                                             {
-                                                if(transactions.getDate().isAfter(startOfInputYear) && transactions.getDate().isBefore(currentDate))
+                                                if(transactions.getDate().isBefore(startOfYear) && transactions.getDate().isAfter(endOfYear))
                                                 {
-                                                    System.out.printf("\n%s \t %s \t %s \t %s \t %f",
+                                                    System.out.printf("%-12s %-8s %-25s %-15s %10.2f%n",
                                                             transactions.getDate(), transactions.getTime(),
                                                             transactions.getDescription(), transactions.getVendor(),
                                                             transactions.getAmount());
@@ -205,14 +202,15 @@ public class Main
                                         case "3":
                                             System.out.println("\nHere are all your transactions from the previous year:");
 
-                                            int currentYear = currentDate.getYear();
-                                            LocalDate startOfYear = currentDate.withYear(currentYear).withDayOfYear(1);
+                                            int previousYear = currentYear -1;
+                                            LocalDate startOfPreviousYear = LocalDate.of(previousYear, 1,1);
+                                            LocalDate endOfPreviousYear = LocalDate.of(previousYear,12, 31);
 
                                             for(Transactions transactions : allTransactions)
                                             {
-                                                if(transactions.getDate().isAfter(startOfYear) && transactions.getDate().isBefore(currentDate))
+                                                if(transactions.getDate().isBefore(endOfPreviousYear) && transactions.getDate().isAfter(startOfPreviousYear))
                                                 {
-                                                    System.out.printf("\n%s \t %s \t %s \t %s \t %f",
+                                                    System.out.printf("%-12s %-8s %-25s %-15s %10.2f%n",
                                                             transactions.getDate(), transactions.getTime(),
                                                             transactions.getDescription(), transactions.getVendor(),
                                                             transactions.getAmount());
