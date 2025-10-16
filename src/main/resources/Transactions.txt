@@ -1,31 +1,57 @@
-2020-02-14|09:15|Office Supplies Purchase|Staples|-58.90
-2020-04-23|13:45|Client Payment Received|BrightTech|1250.00
-2020-06-10|11:30|Business Lunch|Olive Garden|-42.60
-2020-09-05|08:50|Printer Ink Refill|Office Depot|-68.25
-2020-12-18|10:20|End of Year Bonus Deposit|Company HQ|2000.00
-2021-01-14|09:35|Software Subscription|Microsoft|-99.99
-2021-03-03|14:22|Client Payment Received|NextGen Media|1750.00
-2021-05-11|10:05|Team Coffee Meeting|Starbucks|-18.75
-2021-07-29|16:40|Office Cleaning Service|MaidPro|-210.00
-2021-11-12|09:00|Client Payment Received|TechCore|1800.00
-2022-01-25|11:45|Internet Bill|Comcast|-125.00
-2022-03-08|13:30|Office Decor Purchase|IKEA|-340.80
-2022-06-19|09:20|Client Payment Received|Digital Wave|2500.00
-2022-09-02|08:10|Software License Renewal|Adobe|-299.99
-2022-12-14|15:55|Holiday Bonus Deposit|Company HQ|1500.00
-2023-02-10|10:50|Office Rent Payment|WeWork|-1200.00
-2023-04-07|11:12|Client Payment Received|Blue Horizon|3100.00
-2023-06-21|09:25|Team Lunch|Panera Bread|-64.80
-2023-09-05|14:40|Online Advertising Fee|Meta|-400.00
-2023-11-18|10:30|Client Payment Received|Visionary Labs|2600.00
-2024-01-08|09:10|Networking Equipment|Newegg|-520.50
-2024-03-15|08:35|Client Payment Received|TechNova|2800.00
-2024-05-22|14:05|Printer Paper Restock|OfficeMax|-34.95
-2024-07-19|09:45|Monthly Internet Bill|Comcast|-120.00
-2024-10-02|10:55|Client Payment Received|Acme Corp|3600.00
-2025-01-14|09:18|Software Subscription|Microsoft|-99.99
-2025-03-26|13:27|Client Payment Received|Bright Media|3900.00
-2025-06-10|08:42|Office Furniture Purchase|Wayfair|-480.00
-2025-08-23|11:20|Client Payment Received|NextGen Corp|4100.00
-2025-10-01|15:10|Office Rent Payment|WeWork|-1250.00
-2025-10-15|20:22|Amazon Refund|Amazon|54.4
+2022-01-14|08:45:12|Coffee|Starbucks|-4.75
+2022-02-10|17:22:33|Groceries|Walmart|-82.50
+2022-03-05|11:40:10|Paycheck|Employer Inc.|2200.00
+2022-04-16|13:10:22|Gas|Shell|-47.90
+2022-05-02|09:33:59|Lunch|Subway|-9.50
+2022-06-12|10:12:01|Freelance Payment|Upwork|500.00
+2022-07-22|15:44:23|Utilities|ComEd|-120.35
+2022-08-04|18:50:30|Streaming Service|Netflix|-15.99
+2022-09-18|09:10:42|Paycheck|Employer Inc.|2250.00
+2022-10-03|12:27:18|Clothing|Target|-60.00
+2022-11-20|14:33:05|Groceries|Costco|-95.10
+2022-12-10|16:20:10|Holiday Bonus|Employer Inc.|500.00
+2023-01-12|09:05:42|Gas|BP|-52.00
+2023-02-08|11:14:10|Paycheck|Employer Inc.|2300.00
+2023-03-15|17:30:12|Dinner|Olive Garden|-40.00
+2023-04-07|08:55:05|Online Purchase|Amazon|-78.99
+2023-05-19|14:12:33|Paycheck|Employer Inc.|2300.00
+2023-06-11|10:18:12|Gym Membership|Planet Fitness|-25.00
+2023-07-26|15:47:29|Concert Tickets|Ticketmaster|-120.00
+2023-08-14|18:35:22|Paycheck|Employer Inc.|2350.00
+2023-09-09|08:29:10|Groceries|Trader Joe’s|-87.20
+2023-10-03|12:50:44|Gas|Shell|-49.75
+2023-11-17|19:22:50|Paycheck|Employer Inc.|2400.00
+2023-12-22|09:14:19|Gift Purchase|Amazon|-150.00
+2024-01-08|08:12:33|Paycheck|Employer Inc.|2400.00
+2024-02-11|13:40:12|Utilities|ComEd|-110.75
+2024-03-05|10:05:42|Coffee|Dunkin|-3.95
+2024-04-22|09:22:33|Paycheck|Employer Inc.|2450.00
+2024-05-14|15:16:50|Groceries|Aldi|-65.25
+2024-06-03|08:50:21|Internet Bill|Xfinity|-85.99
+2024-07-25|17:18:02|Paycheck|Employer Inc.|2500.00
+2024-08-19|09:45:12|Car Repair|AutoZone|-230.00
+2024-09-13|16:22:11|Dining|Chipotle|-12.75
+2024-10-07|09:23:10|Paycheck|Employer Inc.|2550.00
+2024-11-15|11:10:22|Utilities|ComEd|-112.90
+2024-12-09|17:30:12|Holiday Bonus|Employer Inc.|600.00
+2025-01-10|09:00:12|Paycheck|Employer Inc.|2600.00
+2025-01-20|18:22:40|Groceries|Walmart|-95.50
+2025-02-05|12:33:11|Streaming Service|Netflix|-15.99
+2025-02-25|08:47:20|Paycheck|Employer Inc.|2600.00
+2025-03-11|13:10:42|Gas|Shell|-52.75
+2025-03-25|09:50:30|Paycheck|Employer Inc.|2650.00
+2025-04-14|10:35:18|Clothing|Target|-80.00
+2025-04-28|17:40:50|Paycheck|Employer Inc.|2650.00
+2025-05-09|09:28:11|Utilities|ComEd|-118.25
+2025-05-23|08:15:32|Paycheck|Employer Inc.|2700.00
+2025-06-06|12:05:48|Dining|Chipotle|-13.50
+2025-06-20|10:22:59|Paycheck|Employer Inc.|2700.00
+2025-07-10|11:40:12|Internet Bill|Xfinity|-89.99
+2025-07-25|09:12:22|Paycheck|Employer Inc.|2750.00
+2025-08-08|15:25:09|Groceries|Aldi|-72.35
+2025-08-22|10:00:44|Paycheck|Employer Inc.|2750.00
+2025-09-12|09:35:11|Gas|BP|-49.90
+2025-09-26|08:45:00|Paycheck|Employer Inc.|2800.00
+2025-10-10|09:10:15|Utilities|ComEd|-120.50
+2025-10-11|09:22:20|Paycheck|Employer Inc.|2800.00
+2025-10-15|23:44|YearUp Stipend|YearUp|50.0

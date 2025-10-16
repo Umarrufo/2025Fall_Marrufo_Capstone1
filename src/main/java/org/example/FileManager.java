@@ -62,8 +62,11 @@ public class FileManager
             FileWriter fileWriter = new FileWriter("src/main/resources/Transactions.txt", true);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
-            bufferedWriter.write("\n" + transaction.getDate() + "|" + transaction.getTime().format(timeFormatter) + "|" +
-                    transaction.getDescription() + "|" + transaction.getVendor() + "|" +
+            bufferedWriter.write("\n" + transaction.getDate()
+                    + "|" + transaction.getTime().format(timeFormatter)
+                    + "|" + transaction.getDescription()
+                    + "|" + transaction.getVendor()
+                    + "|" +
                     transaction.getAmount());
 
             bufferedWriter.close();

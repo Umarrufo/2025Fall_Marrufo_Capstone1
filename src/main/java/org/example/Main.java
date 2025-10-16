@@ -1,11 +1,7 @@
 package org.example;
 
-import java.io.FileReader;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -16,9 +12,12 @@ public class Main
         //Scanner
         Scanner scanner = new Scanner(System.in);
 
+        LocalDate currentDate = LocalDate.now();
+
         while(true)
         {
-            System.out.println("\nPlease choose an option");
+            System.out.println("\n");
+            System.out.println("Please choose an option");
             System.out.println("1) Add Deposit");
             System.out.println("2) Make Payment");
             System.out.println("3) Ledger");
@@ -117,7 +116,7 @@ public class Main
                             }
                             break;
                         case "4":
-                            System.out.println("\nWhat report would you like to see?" +
+                            System.out.println("What report would you like to see?" +
                                     "\nPlease enter the number");
                             System.out.println("1) Previous Month");
                             System.out.println("2) Year to Date");
@@ -127,24 +126,60 @@ public class Main
 
                             switch (reportsInput)
                             {
+
+
                                 case "1":
                                     System.out.println("\nHere are all your transactions from the previous month");
-//                                    for(Transactions transactions : allTransactions)
-//                                    {
-//                                        if(transactions.getDate().getMonth() )
-//                                        {
-//                                            System.out.printf("\n%s \t %s \t %s \t %s \t %f",
-//                                                    transactions.getDate(), transactions.getTime(),
-//                                                    transactions.getDescription(), transactions.getVendor(),
-//                                                    transactions.getAmount());
-//                                        }
-//                                    }
+
+                                    LocalDate startOfPastMonth = currentDate.minusMonths(1).withDayOfMonth(1);
+                                    LocalDate endOfPastMonth = currentDate.withDayOfMonth(1).minusDays(1);
+
+                                    for(Transactions transactions : allTransactions)
+                                    {
+                                        if(transactions.getDate().isBefore(endOfPastMonth) && transactions.getDate().isAfter(startOfPastMonth))
+                                        {
+                                            System.out.printf("\n%s \t %s \t %s \t %s \t %f",
+                                                    transactions.getDate(), transactions.getTime(),
+                                                    transactions.getDescription(), transactions.getVendor(),
+                                                    transactions.getAmount());
+                                        }
+                                    }
                                     break;
                                 case "2":
-                                    System.out.println("\nHere are all your transactions from the start of that year");
+                                    System.out.println("What year would you like your transactions to begin from?");
+                                    int startYear = scanner.nextInt();
+
+                                    LocalDate startOfInputYear = currentDate.withYear(startYear).withDayOfYear(1);
+
+                                    System.out.printf("\nHere are all your transactions starting from %d to today", startYear);
+
+                                    for(Transactions transactions : allTransactions)
+                                    {
+                                        if(transactions.getDate().isAfter(startOfInputYear) && transactions.getDate().isBefore(currentDate))
+                                        {
+                                            System.out.printf("\n%s \t %s \t %s \t %s \t %f",
+                                                    transactions.getDate(), transactions.getTime(),
+                                                    transactions.getDescription(), transactions.getVendor(),
+                                                    transactions.getAmount());
+                                        }
+                                    }
                                     break;
                                 case "3":
-                                    System.out.println("\nHere are all your transactions from the previous year");
+                                    System.out.println("\nHere are all your transactions from the previous year:");
+
+                                    int currentYear = currentDate.getYear();
+                                    LocalDate startOfYear = currentDate.withYear(currentYear).withDayOfYear(1);
+
+                                    for(Transactions transactions : allTransactions)
+                                    {
+                                        if(transactions.getDate().isAfter(startOfYear) && transactions.getDate().isBefore(currentDate))
+                                        {
+                                            System.out.printf("\n%s \t %s \t %s \t %s \t %f",
+                                                    transactions.getDate(), transactions.getTime(),
+                                                    transactions.getDescription(), transactions.getVendor(),
+                                                    transactions.getAmount());
+                                        }
+                                    }
                                     break;
                                 case "4":
                                     break;
