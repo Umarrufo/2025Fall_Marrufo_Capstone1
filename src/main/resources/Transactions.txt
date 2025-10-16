@@ -1,34 +1,30 @@
-2021-03-15|09:12|Office Chairs Purchase|IKEA|-429.99
-2021-04-02|14:35|Team Lunch|Panera Bread|-58.60
-2021-05-10|10:48|Printer Paper Restock|Staples|-39.99
-2021-07-19|15:22|Business Trip Flight|Delta Airlines|-389.50
-2021-09-03|08:55|Client Breakfast|Starbucks|-22.30
-2021-12-11|11:47|Web Hosting Renewal|GoDaddy|-180.00
-2022-01-08|09:25|Software Subscription|Microsoft|-99.99
-2022-02-14|13:17|Office Decor|Target|-75.40
-2022-03-30|16:42|Team Dinner|Cheesecake Factory|-132.75
-2022-05-06|10:03|Client Meeting Coffee|Dunkin|-14.85
-2022-08-15|09:58|Printer Ink Cartridges|Office Depot|-68.90
-2022-10-01|14:10|Monthly Internet Bill|Comcast|-120.00
-2023-01-20|11:22|Laptop Repair Service|Best Buy|-249.99
-2023-02-05|09:04|Conference Registration|TechWorld Expo|-350.00
-2023-03-11|08:32|Team Breakfast|IHOP|-47.20
-2023-04-18|12:16|Digital Ads Payment|Google Ads|-400.00
-2023-06-09|15:30|Office Snacks|Costco|-93.50
-2023-07-25|10:51|Company T-Shirts|Custom Ink|-178.40
-2023-09-12|09:11|Parking Fees|City Parking|-26.00
-2023-11-30|17:39|Year-End Party Venue|Marriott|-620.00
-2024-01-05|10:45|Client Payment Received|Acme Corp|+2500.00
-2024-03-22|09:28|Client Payment Received|Tech Solutions|1800.00
-2024-05-19|13:10|Office Cleaning Service|MaidPro|-240.00
-2024-07-04|08:37|Subscription Renewal|Adobe|-299.99
-2024-09-16|11:56|Client Payment Received|Bright Media|3200.00
-2024-11-03|10:05|Online Advertising|Meta|-500.00
-2025-01-09|09:14|Networking Equipment|Newegg|-459.80
-2025-03-11|14:26|Catering Service|Local Eats|-289.60
-2025-07-22|08:45|Client Payment Received|NextGen Corp|4100.00
-2025-10-05|16:20|Office Rent Payment|WeWork|-1250.00
-
-2025-10-15|13:54:36.034265900|Food|Pizza Patron|10.0
-2025-10-15|13:56:13.347450100|Coffee|Starbucks|-7.58
-2025-10-15|14:50:51.604152800|Food|Walmart|89.45
+2020-02-14|09:15|Office Supplies Purchase|Staples|-58.90
+2020-04-23|13:45|Client Payment Received|BrightTech|1250.00
+2020-06-10|11:30|Business Lunch|Olive Garden|-42.60
+2020-09-05|08:50|Printer Ink Refill|Office Depot|-68.25
+2020-12-18|10:20|End of Year Bonus Deposit|Company HQ|2000.00
+2021-01-14|09:35|Software Subscription|Microsoft|-99.99
+2021-03-03|14:22|Client Payment Received|NextGen Media|1750.00
+2021-05-11|10:05|Team Coffee Meeting|Starbucks|-18.75
+2021-07-29|16:40|Office Cleaning Service|MaidPro|-210.00
+2021-11-12|09:00|Client Payment Received|TechCore|1800.00
+2022-01-25|11:45|Internet Bill|Comcast|-125.00
+2022-03-08|13:30|Office Decor Purchase|IKEA|-340.80
+2022-06-19|09:20|Client Payment Received|Digital Wave|2500.00
+2022-09-02|08:10|Software License Renewal|Adobe|-299.99
+2022-12-14|15:55|Holiday Bonus Deposit|Company HQ|1500.00
+2023-02-10|10:50|Office Rent Payment|WeWork|-1200.00
+2023-04-07|11:12|Client Payment Received|Blue Horizon|3100.00
+2023-06-21|09:25|Team Lunch|Panera Bread|-64.80
+2023-09-05|14:40|Online Advertising Fee|Meta|-400.00
+2023-11-18|10:30|Client Payment Received|Visionary Labs|2600.00
+2024-01-08|09:10|Networking Equipment|Newegg|-520.50
+2024-03-15|08:35|Client Payment Received|TechNova|2800.00
+2024-05-22|14:05|Printer Paper Restock|OfficeMax|-34.95
+2024-07-19|09:45|Monthly Internet Bill|Comcast|-120.00
+2024-10-02|10:55|Client Payment Received|Acme Corp|3600.00
+2025-01-14|09:18|Software Subscription|Microsoft|-99.99
+2025-03-26|13:27|Client Payment Received|Bright Media|3900.00
+2025-06-10|08:42|Office Furniture Purchase|Wayfair|-480.00
+2025-08-23|11:20|Client Payment Received|NextGen Corp|4100.00
+2025-10-01|15:10|Office Rent Payment|WeWork|-1250.00

@@ -2,19 +2,19 @@ package org.example;
 
 import java.io.FileReader;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main
 {
-    public static <transactions> void main(String[] args)
+    public static void main(String[] args)
     {
         //Scanner
         Scanner scanner = new Scanner(System.in);
-
-        List<Transactions> transactions = new ArrayList<>();
 
         while(true)
         {
@@ -73,13 +73,17 @@ public class Main
                     System.out.println("5) Return");
                     String ledgerInput = scanner.nextLine();
 
+                    List<Transactions> allTransactions = FileManager.transactionHelper();
+
                     switch(ledgerInput)
                     {
                         case "1":
-                            System.out.println("Here are all your transactions\n");
-                            for (Transactions catalog : transactions)
+                            System.out.println("Here are all your transactions:");
+                            for(Transactions transactions : allTransactions)
                             {
-                                    System.out.println(transactions.getClass());
+                                System.out.printf("%s \t %s \t %f\n",
+                                        transactions.getDescription(), transactions.getVendor(),
+                                        transactions.getAmount());
                             }
 
                             break;

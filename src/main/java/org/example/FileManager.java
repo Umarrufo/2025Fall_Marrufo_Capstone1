@@ -4,12 +4,13 @@ package org.example;
 import java.io.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FileManager
 {
-    public static List<Transactions> main(String[] args)
+    public static List<Transactions> transactionHelper()
     {
         List<Transactions> transactions = new ArrayList<>();
 
@@ -35,7 +36,7 @@ public class FileManager
 
                 transactions.add(newTransaction);
             }
-            reader.close();;
+            reader.close();
 
         }
         catch (FileNotFoundException ex1)
@@ -56,10 +57,12 @@ public class FileManager
         //File writer used when asking for user input
         try
         {
+            DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
+
             FileWriter fileWriter = new FileWriter("src/main/resources/Transactions.txt", true);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
-            bufferedWriter.write(transaction.getDate() + "|" + transaction.getTime() + "|" +
+            bufferedWriter.write(transaction.getDate() + "|" + transaction.getTime().format(timeFormatter) + "|" +
                     transaction.getDescription() + "|" + transaction.getVendor() + "|" +
                     transaction.getAmount() + "\n");
 
@@ -70,5 +73,4 @@ public class FileManager
             System.out.println("Something went wrong with the file, try again");
         }
     }
-
 }
