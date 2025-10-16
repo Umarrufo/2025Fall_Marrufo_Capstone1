@@ -189,7 +189,7 @@ public class Main
 
                                             for(Transactions transactions : allTransactions)
                                             {
-                                                if(transactions.getDate().isBefore(startOfYear) && transactions.getDate().isAfter(endOfYear))
+                                                if(transactions.getDate().isAfter(startOfYear) && transactions.getDate().isBefore(endOfYear))
                                                 {
                                                     System.out.printf("%-12s %-8s %-25s %-15s %10.2f%n",
                                                             transactions.getDate(), transactions.getTime(),
@@ -225,6 +225,7 @@ public class Main
                                             System.out.println("\nInvalid choice: Please try again");
                                     }
                                 }
+                                break;
 
                             case "5":
                                 ledgerRunning = false;
@@ -234,6 +235,7 @@ public class Main
                                 System.out.println("\nInvalid choice: Please try again");
                         }
                     }
+                    break;
 
                 case "4":
                     System.exit(0);
