@@ -28,3 +28,4 @@
 2025-06-10|08:42|Office Furniture Purchase|Wayfair|-480.00
 2025-08-23|11:20|Client Payment Received|NextGen Corp|4100.00
 2025-10-01|15:10|Office Rent Payment|WeWork|-1250.00
+2025-10-15|20:22|Amazon Refund|Amazon|54.4

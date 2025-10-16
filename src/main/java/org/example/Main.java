@@ -18,6 +18,7 @@ public class Main
 
         while(true)
         {
+            System.out.println("\nPlease choose an option");
             System.out.println("1) Add Deposit");
             System.out.println("2) Make Payment");
             System.out.println("3) Ledger");
@@ -78,22 +79,46 @@ public class Main
                     switch(ledgerInput)
                     {
                         case "1":
-                            System.out.println("Here are all your transactions:");
+                            System.out.println("\nHere are all your transactions:");
                             for(Transactions transactions : allTransactions)
                             {
-                                System.out.printf("%s \t %s \t %f\n",
+                                System.out.printf("\n%s \t %s \t %s \t %s \t %f",
+                                        transactions.getDate(), transactions.getTime(),
                                         transactions.getDescription(), transactions.getVendor(),
                                         transactions.getAmount());
                             }
 
                             break;
                         case "2":
-                            System.out.println("Here are all your deposits\n");
+                            System.out.println("\nHere are all your deposits");
+                            for(Transactions transactions : allTransactions)
+                            {
+                                if(transactions.getAmount() > 0)
+                                {
+                                    System.out.printf("\n%s \t %s \t %s \t %s \t %f",
+                                            transactions.getDate(), transactions.getTime(),
+                                            transactions.getDescription(), transactions.getVendor(),
+                                            transactions.getAmount());
+                                }
+                            }
+
                             break;
                         case "3":
-                            System.out.println("Here are all your payments\n");
+                            System.out.println("\nHere are all your payments");
+                            for(Transactions transactions : allTransactions)
+                            {
+                                if(transactions.getAmount() < 0)
+                                {
+                                    System.out.printf("\n%s \t %s \t %s \t %s \t %f",
+                                            transactions.getDate(), transactions.getTime(),
+                                            transactions.getDescription(), transactions.getVendor(),
+                                            transactions.getAmount());
+                                }
+                            }
                             break;
                         case "4":
+                            System.out.println("\nWhat report would you like to see?" +
+                                    "\nPlease enter the number");
                             System.out.println("1) Previous Month");
                             System.out.println("2) Year to Date");
                             System.out.println("3) Previous Year");
@@ -103,25 +128,35 @@ public class Main
                             switch (reportsInput)
                             {
                                 case "1":
-                                    System.out.println("Here are all your transactions from the previous month\n");
+                                    System.out.println("\nHere are all your transactions from the previous month");
+//                                    for(Transactions transactions : allTransactions)
+//                                    {
+//                                        if(transactions.getDate().getMonth() )
+//                                        {
+//                                            System.out.printf("\n%s \t %s \t %s \t %s \t %f",
+//                                                    transactions.getDate(), transactions.getTime(),
+//                                                    transactions.getDescription(), transactions.getVendor(),
+//                                                    transactions.getAmount());
+//                                        }
+//                                    }
                                     break;
                                 case "2":
-                                    System.out.println("Here are all your transactions from the start of that year\n");
+                                    System.out.println("\nHere are all your transactions from the start of that year");
                                     break;
                                 case "3":
-                                    System.out.println("Here are all your transactions from the previous year\n");
+                                    System.out.println("\nHere are all your transactions from the previous year");
                                     break;
                                 case "4":
                                     break;
                                 default:
-                                    System.out.println("Invalid choice: Please try again");
+                                    System.out.println("\nInvalid choice: Please try again");
                             }
                             break;
 
                         case "5":
                             break;
                         default:
-                            System.out.println("Invalid choice: Please try again");
+                            System.out.println("\nInvalid choice: Please try again");
                     }
                     break;
 
@@ -130,7 +165,7 @@ public class Main
                     break;
 
                 default:
-                    System.out.println("Invalid choice: Please try again");
+                    System.out.println("\nInvalid choice: Please try again");
 
             }
 
